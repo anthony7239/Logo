@@ -1,25 +1,17 @@
-function setup() {
-    createCanvas(640, 160);
-    var str1 = color("#D7D7D7");
-    var str2 = color("#FFFFFF");
-    var str3 = color("black");
-    var str4 = color("red");
-    var str5 = ("160")
-    var str6 = ("95")
-    
-    
-    background(str1);
-    
-    noStroke()
-    fill(str2)
-    triangle(200, str5, 320, -100, 440, str5);
-    
-    fill(str3)
-    textFont("Impact, Charcoal, sans-serif");
-    textSize(64);
-    text("ANTHONY", 204, str6)
-    
-    fill(str4);
-    noStroke();
-    rect(201, str6, 235, 15);
+var value = 0;
+function setup() { 
+  	createCanvas(400, 400);
+} 
+function draw() {
+    fill(value);
+    rect(25, 25, 250, 250);
+  
+    fill("black")    
+    rect(35, 35, 100, 100)   
+}
+function mouseMoved() {
+  value = value + 5;
+  if (value > 255) {
+    value = 0;
+  }
 }
